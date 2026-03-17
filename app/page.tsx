@@ -138,7 +138,7 @@ export default function Home() {
               Jukebox · Your Discord music machine
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Bring a neon-lit music room to your Discord server.
+              Bring JukeBox to your server for unlimited music.
             </h1>
             <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
               Jukebox gives your server a clean, retro-styled music experience with simple controls,
