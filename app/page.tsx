@@ -22,10 +22,10 @@ const features = [
     detail: "Made for real communities",
   },
   {
-    title: "Premium-ready roadmap",
+    title: "Built to keep improving",
     description:
-      "Jukebox is built to grow into saved playlists, 24/7 mode, autoplay, and premium server perks without losing its clean feel.",
-    detail: "Free now, scalable later",
+      "Jukebox keeps growing with better automation, smarter queue tools, and quality-of-life upgrades shaped by the communities using it.",
+    detail: "Community-backed roadmap",
   },
 ];
 
@@ -41,9 +41,9 @@ const steps = [
       "Use straightforward slash commands to play songs, manage the queue, and keep the mood moving.",
   },
   {
-    title: "Upgrade when you want more",
+    title: "Support the project",
     description:
-      "Start free, then unlock premium perks like saved playlists, autoplay, and 24/7 sessions when your server wants more control.",
+      "If Jukebox becomes part of your server, back the project through the support community so it stays reliable, online, and actively improved.",
   },
 ];
 
@@ -80,30 +80,11 @@ const commands = [
   },
 ];
 
-const plans = [
-  {
-    name: "Free",
-    price: "£0",
-    note: "Great for everyday servers",
-    items: [
-      "Core music playback",
-      "Basic queue controls",
-      "Slash commands",
-      "Community support",
-    ],
-  },
-  {
-    name: "Premium",
-    price: "Planned",
-    note: "Built for power users and active communities",
-    items: [
-      "24/7 voice sessions",
-      "Saved server playlists",
-      "Autoplay / radio mode",
-      "Bigger queues and priority perks",
-      "DJ role and server controls",
-    ],
-  },
+const supportWays = [
+  "Join the support server and stay close to updates.",
+  "Share feedback, issues, and feature ideas from real server use.",
+  "Help keep Jukebox sustainable so uptime and improvements stay a priority.",
+  "Bring other communities in if you want to help the project grow.",
 ];
 
 export default function Home() {
@@ -130,7 +111,7 @@ export default function Home() {
         <header className="space-y-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
             <span className="h-2 w-2 rounded-full bg-[#f72585]" />
-            Retro Discord music bot
+            Community-supported Discord music bot
           </div>
 
           <div className="space-y-6">
@@ -138,27 +119,38 @@ export default function Home() {
               Jukebox · Your Discord music machine
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Bring JukeBox to your server for unlimited music.
+              Bring JukeBox to your server — and help keep it running.
             </h1>
             <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
               Jukebox gives your server a clean, retro-styled music experience with simple controls,
-              smooth queue handling, and a roadmap toward premium features that actually matter.
+              smooth queue handling, and a support-driven roadmap focused on keeping the bot online,
+              reliable, and worth using every day.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/75 backdrop-blur sm:p-6">
+            <p className="font-semibold uppercase tracking-[0.28em] text-white/55">
+              Keep Jukebox operational
+            </p>
+            <p className="mt-3 max-w-3xl text-base text-white/80">
+              If Jukebox improves your server, backing the project through the support community helps
+              cover the work behind uptime, fixes, and the next round of improvements.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4">
             <a
-              href={inviteUrl}
+              href={supportUrl}
               className="group inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-[#f72585] via-[#d91ef5] to-[#00f5ff] px-8 py-3 text-base font-semibold text-white shadow-[0_0_25px_rgba(247,37,133,0.45)] transition hover:translate-y-0.5"
             >
-              Invite the bot
+              Support the project
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
-              href={supportUrl}
+              href={inviteUrl}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white/80 transition hover:border-white hover:text-white"
             >
-              Join support server
+              Invite the bot
             </a>
           </div>
 
@@ -184,8 +176,8 @@ export default function Home() {
               Built for real server sessions.
             </h2>
             <p className="max-w-2xl text-white/70">
-              Jukebox is designed to feel clean, fast, and fun now — while leaving room for premium
-              upgrades that improve convenience instead of locking away the basics.
+              Jukebox is designed to feel clean, fast, and fun now — with the project supported in a
+              way that keeps the essentials strong and the experience getting better over time.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -229,25 +221,19 @@ export default function Home() {
 
           <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-[#11062d]/90 to-[#030014]/60 p-8 backdrop-blur">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Premium roadmap
+              Why people back it
             </p>
             <ul className="mt-6 space-y-5 text-sm text-white/80">
-              <li className="flex items-start gap-3">
-                <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#f72585]" />
-                24/7 mode for servers that want music always ready.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00f5ff]" />
-                Saved server playlists so the best sessions are one command away.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#f7b500]" />
-                Autoplay / radio mode to keep music going without dead air.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#ac6bff]" />
-                DJ role controls and bigger queues for active communities.
-              </li>
+              {supportWays.map((item, index) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span
+                    className={`mt-1 h-2.5 w-2.5 rounded-full ${
+                      ["bg-[#f72585]", "bg-[#00f5ff]", "bg-[#f7b500]", "bg-[#ac6bff]"][index]
+                    }`}
+                  />
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
         </section>
@@ -261,8 +247,8 @@ export default function Home() {
               Quick controls your server will actually use.
             </h2>
             <p className="max-w-2xl text-white/70">
-              Simple commands first. Premium value comes from persistence, control, and automation —
-              not from paywalling the basics.
+              Simple commands first. The goal is a bot that feels easy to run, dependable in voice,
+              and worth supporting because it stays sharp.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -287,41 +273,43 @@ export default function Home() {
         <section className="mt-24 space-y-8">
           <div className="flex flex-col gap-3">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Free vs premium
+              Support Jukebox
             </p>
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              A simple monetization path that feels fair.
+              Help keep the bot stable, available, and improving.
             </h2>
             <p className="max-w-2xl text-white/70">
-              Free should stay useful. Premium should save time, reduce friction, and give active
-              communities better control.
+              Jukebox is meant to be useful first. If your community enjoys it, supporting the project
+              helps keep hosting, maintenance, and product improvements moving in the right direction.
             </p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {plans.map((plan) => (
-              <article
-                key={plan.name}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
-              >
-                <div className="flex items-end justify-between gap-4">
-                  <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60">
-                      {plan.name}
-                    </p>
-                    <h3 className="mt-2 text-3xl font-semibold text-white">{plan.price}</h3>
-                  </div>
-                  <p className="max-w-[14rem] text-right text-sm text-white/60">{plan.note}</p>
-                </div>
-                <ul className="mt-6 space-y-3 text-sm text-white/75">
-                  {plan.items.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00f5ff]" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+            <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+              <div className="space-y-4 text-sm text-white/75">
+                <p>
+                  Backing the project is about keeping Jukebox healthy: faster fixes, better reliability,
+                  and a clearer path for the features communities actually ask for.
+                </p>
+                <p>
+                  No bloated pricing grid. No split between free and paid messaging. Just a clean ask:
+                  if Jukebox earns a place in your server, help keep it going.
+                </p>
+              </div>
+              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">
+                <a
+                  href={supportUrl}
+                  className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
+                >
+                  Join the support server
+                </a>
+                <a
+                  href={inviteUrl}
+                  className="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 text-base font-semibold text-white/90 transition hover:text-white"
+                >
+                  Invite Jukebox
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -332,25 +320,25 @@ export default function Home() {
                 Ready to groove?
               </p>
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                Add Jukebox now. Upgrade later when your server wants more.
+                Invite Jukebox now — and back it if you want to keep it strong.
               </h2>
               <p className="max-w-2xl text-white/70">
-                Invite Jukebox to your server, start a queue, and keep the room moving with fast,
-                familiar slash-command controls.
+                Add Jukebox to your server, start a queue, and if it becomes part of the routine,
+                support the project that keeps it online and improving.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
-                href={inviteUrl}
+                href={supportUrl}
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
               >
-                Launch invite
+                Support Jukebox
               </a>
               <a
-                href={supportUrl}
+                href={inviteUrl}
                 className="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 text-base font-semibold text-white/90 transition hover:text-white"
               >
-                Support lounge
+                Launch invite
               </a>
             </div>
           </div>
@@ -362,7 +350,7 @@ export default function Home() {
             <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
               Features
             </a>
-            <span className="uppercase tracking-[0.3em] text-white/40">Premium planned</span>
+            <span className="uppercase tracking-[0.3em] text-white/40">Community supported</span>
           </div>
         </footer>
       </div>
