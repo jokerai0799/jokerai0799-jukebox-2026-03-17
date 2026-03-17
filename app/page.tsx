@@ -300,7 +300,7 @@ export default function Home() {
                   href={supportUrl}
                   className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
                 >
-                  Join the support server
+                  Donate to support JukeBox
                 </a>
                 <a
                   href={inviteUrl}
@@ -332,7 +332,7 @@ export default function Home() {
                 href={supportUrl}
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
               >
-                Support Jukebox
+                Donate to support JukeBox
               </a>
               <a
                 href={inviteUrl}
