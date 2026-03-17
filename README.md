@@ -1,6 +1,6 @@
-# Jukebox
+# MusicJoker landing page
 
-Retro-styled Next.js landing page for the Jukebox Discord music bot.
+Retro-styled Next.js landing page for the MusicJoker Discord music bot.
 
 ## Stack
 - Next.js 16
@@ -29,6 +29,7 @@ Recommended settings:
 - Output setting: default Next.js output
 
 ## Notes
-- The current Discord invite and support links are placeholders and are acceptable for v1.
+- The public bot invite is wired directly into the site CTA buttons.
+- The support link is still a placeholder until the production support server URL is confirmed.
 - No required environment variables are currently needed for deployment.
 - The site is a static/standard marketing page with no backend dependencies.

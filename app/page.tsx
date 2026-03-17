@@ -1,5 +1,5 @@
 const inviteUrl =
-  "https://discord.com/oauth2/authorize?client_id=000000000000000000&scope=bot+applications.commands&permissions=36700160";
+  "https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800";
 const supportUrl = "https://discord.gg/jukebox";
 
 const stats = [
@@ -24,14 +24,14 @@ const features = [
   {
     title: "Premium-ready roadmap",
     description:
-      "Jukebox is built to grow into saved playlists, 24/7 mode, autoplay, and premium server perks without losing its clean feel.",
+      "MusicJoker is built to grow into saved playlists, 24/7 mode, autoplay, and premium server perks without losing its clean feel.",
     detail: "Free now, scalable later",
   },
 ];
 
 const steps = [
   {
-    title: "Invite Jukebox",
+    title: "Invite MusicJoker",
     description:
       "Add the bot to your server, let it join voice, and keep the setup dead simple for members and moderators.",
   },
@@ -135,13 +135,13 @@ export default function Home() {
 
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase text-white/70">
-              Jukebox · Your Discord music machine
+              MusicJoker · Your Discord music machine
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
               Bring a neon-lit music room to your Discord server.
             </h1>
             <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
-              Jukebox gives your server a clean, retro-styled music experience with simple controls,
+              MusicJoker gives your server a clean, retro-styled music experience with simple controls,
               smooth queue handling, and a roadmap toward premium features that actually matter.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function Home() {
               Built for real server sessions.
             </h2>
             <p className="max-w-2xl text-white/70">
-              Jukebox is designed to feel clean, fast, and fun now — while leaving room for premium
+              MusicJoker is designed to feel clean, fast, and fun now — while leaving room for premium
               upgrades that improve convenience instead of locking away the basics.
             </p>
           </div>
@@ -332,11 +332,11 @@ export default function Home() {
                 Ready to groove?
               </p>
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                Add Jukebox now. Upgrade later when your server wants more.
+                Add MusicJoker now. Upgrade later when your server wants more.
               </h2>
               <p className="max-w-2xl text-white/70">
-                The live site is up with placeholder links for now. Swap in the real invite and
-                support URLs when you are at your PC.
+                Invite MusicJoker to your server, start a queue, and keep the room moving with fast,
+                familiar slash-command controls.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -357,7 +357,7 @@ export default function Home() {
         </section>
 
         <footer className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Jukebox · Greg Co. · Crafted for Discord communities.</span>
+          <span>© {new Date().getFullYear()} MusicJoker · Greg Co. · Crafted for Discord communities.</span>
           <div className="flex items-center gap-4 text-xs">
             <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
               Features
