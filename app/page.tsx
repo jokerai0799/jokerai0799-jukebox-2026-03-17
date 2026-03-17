@@ -43,7 +43,7 @@ const steps = [
   {
     title: "Support the project",
     description:
-      "If Jukebox becomes part of your server, back the project through the support community so it stays reliable, online, and actively improved.",
+      "If Jukebox becomes part of your server, support the project directly so it stays reliable, online, and actively improved.",
   },
 ];
 
