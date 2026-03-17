@@ -148,6 +148,8 @@ export default function Home() {
             </a>
             <a
               href={inviteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white/80 transition hover:border-white hover:text-white"
             >
               Invite the bot
@@ -336,6 +338,8 @@ export default function Home() {
               </a>
               <a
                 href={inviteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 text-base font-semibold text-white/90 transition hover:text-white"
               >
                 Launch invite
