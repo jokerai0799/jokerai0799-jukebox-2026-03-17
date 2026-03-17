@@ -13,9 +13,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jukeboxbot.online"),
   title: "Jukebox · Your Discord music machine",
   description:
-    "Jukebox is the retro-inspired Discord music bot that keeps your server grooving with hi-fi playback and effortless controls.",
+    "Jukebox is a Discord music bot with clean controls, reliable playback, and a retro-inspired experience for active communities.",
+  keywords: [
+    "discord music bot",
+    "music bot for discord",
+    "discord bot music",
+    "jukebox discord bot",
+    "discord music",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Jukebox · Your Discord music machine",
+    description:
+      "Invite JukeBox to your server and bring it to life with clean controls and reliable music playback.",
+    url: "https://jukeboxbot.online",
+    siteName: "Jukebox",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jukebox · Your Discord music machine",
+    description:
+      "Invite JukeBox to your server and bring it to life with clean controls and reliable music playback.",
+  },
 };
 
 export default function RootLayout({
