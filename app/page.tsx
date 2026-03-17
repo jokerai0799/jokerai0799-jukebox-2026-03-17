@@ -3,29 +3,29 @@ const inviteUrl =
 const supportUrl = "https://discord.gg/jukebox";
 
 const stats = [
-  { label: "Servers vibing", value: "2.3K+" },
-  { label: "Tracks spun weekly", value: "48K" },
+  { label: "Servers queued", value: "2.3K+" },
+  { label: "Tracks played weekly", value: "48K" },
   { label: "Latency", value: "< 150 ms" },
 ];
 
 const features = [
   {
-    title: "Hi-fi streaming",
+    title: "Fast, simple playback",
     description:
-      "Lossless-inspired playback with smart volume leveling so every track stays punchy without clipping.",
-    detail: "Powered by regional relays",
+      "Play tracks, queue songs, skip cleanly, and keep music flowing without turning your server into a control panel nightmare.",
+    detail: "Built for everyday Discord use",
   },
   {
-    title: "Mood-aware queue",
+    title: "Server-friendly controls",
     description:
-      "Blend YouTube, Spotify, and SoundCloud links in a single queue with automatic crossfades.",
-    detail: "Drop-ins stay seamless",
+      "DJ role controls, queue management, and moderator-friendly behavior keep shared listening sessions under control.",
+    detail: "Made for real communities",
   },
   {
-    title: "Resident DJ",
+    title: "Premium-ready roadmap",
     description:
-      "Scene-saving presets for lo-fi lounges, raid nights, or karaoke chaos—switch vibes instantly.",
-    detail: "Per-channel memories",
+      "Jukebox is built to grow into saved playlists, 24/7 mode, autoplay, and premium server perks without losing its clean feel.",
+    detail: "Free now, scalable later",
   },
 ];
 
@@ -33,17 +33,17 @@ const steps = [
   {
     title: "Invite Jukebox",
     description:
-      "Drop it into any server channel where music is allowed. Discord permissions are handled for you.",
+      "Add the bot to your server, let it join voice, and keep the setup dead simple for members and moderators.",
   },
   {
-    title: "Queue a track",
+    title: "Queue your music",
     description:
-      "Use slash commands or legacy prefixes—drag in a link, playlist, or search keyword and let it spin.",
+      "Use straightforward slash commands to play songs, manage the queue, and keep the mood moving.",
   },
   {
-    title: "Lock in the vibe",
+    title: "Upgrade when you want more",
     description:
-      "Pin favorite mixes, loop sets, or hand controls to mods. Jukebox keeps the neon glow rolling.",
+      "Start free, then unlock premium perks like saved playlists, autoplay, and 24/7 sessions when your server wants more control.",
   },
 ];
 
@@ -51,32 +51,58 @@ const commands = [
   {
     name: "/play",
     usage: "/play <song or link>",
-    description: "Instantly queue a track from YouTube, Spotify, or SoundCloud.",
-  },
-  {
-    name: "/mix",
-    usage: "/mix <synthwave | chill | hype>",
-    description: "Applies curated EQ + FX chains that match your channel's mood.",
+    description: "Queue a song or playlist and start playback fast.",
   },
   {
     name: "/queue",
     usage: "/queue",
-    description: "See what's lined up, drag-to-reorder, or save the set as a preset.",
+    description: "See what is coming up and keep the session organized.",
   },
   {
     name: "/skip",
     usage: "/skip",
-    description: "Smart skip that auto-fades and respects DJ/mod priority.",
+    description: "Move on cleanly when the room is ready for the next track.",
   },
   {
-    name: "/rewind",
-    usage: "/rewind 30",
-    description: "Jump back to the good part without restarting the whole song.",
+    name: "/pause",
+    usage: "/pause",
+    description: "Pause the current track without losing the queue.",
   },
   {
-    name: "/link",
-    usage: "/link",
-    description: "Pair your web dashboard to manage queues when you're AFK.",
+    name: "/resume",
+    usage: "/resume",
+    description: "Pick the music back up right where it left off.",
+  },
+  {
+    name: "/stop",
+    usage: "/stop",
+    description: "Clear playback when the session is over.",
+  },
+];
+
+const plans = [
+  {
+    name: "Free",
+    price: "£0",
+    note: "Great for everyday servers",
+    items: [
+      "Core music playback",
+      "Basic queue controls",
+      "Slash commands",
+      "Community support",
+    ],
+  },
+  {
+    name: "Premium",
+    price: "Planned",
+    note: "Built for power users and active communities",
+    items: [
+      "24/7 voice sessions",
+      "Saved server playlists",
+      "Autoplay / radio mode",
+      "Bigger queues and priority perks",
+      "DJ role and server controls",
+    ],
   },
 ];
 
@@ -104,7 +130,7 @@ export default function Home() {
         <header className="space-y-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
             <span className="h-2 w-2 rounded-full bg-[#f72585]" />
-            Synthwave audio engine
+            Retro Discord music bot
           </div>
 
           <div className="space-y-6">
@@ -112,11 +138,11 @@ export default function Home() {
               Jukebox · Your Discord music machine
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Spin neon-grade sets with a bot that feels like a real DJ booth.
+              Bring a neon-lit music room to your Discord server.
             </h1>
             <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
-              Jukebox keeps community nights smooth with zero skipping, buttery transitions, and a
-              retro UI that anyone can drive. Drop it into your Discord and let the glow take over.
+              Jukebox gives your server a clean, retro-styled music experience with simple controls,
+              smooth queue handling, and a roadmap toward premium features that actually matter.
             </p>
           </div>
 
@@ -154,10 +180,12 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
               Features
             </p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">Built for late-night sessions.</h2>
+            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+              Built for real server sessions.
+            </h2>
             <p className="max-w-2xl text-white/70">
-              From small friend servers to massive communities, Jukebox keeps the room humming with
-              clever automation and tactile controls.
+              Jukebox is designed to feel clean, fast, and fun now — while leaving room for premium
+              upgrades that improve convenience instead of locking away the basics.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -182,7 +210,7 @@ export default function Home() {
               How it works
             </p>
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Queue, blend, and hand off like a pro.
+              Invite it, queue tracks, keep the room moving.
             </h2>
             <ol className="space-y-6">
               {steps.map((step, index) => (
@@ -201,24 +229,24 @@ export default function Home() {
 
           <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-[#11062d]/90 to-[#030014]/60 p-8 backdrop-blur">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Why servers love it
+              Premium roadmap
             </p>
             <ul className="mt-6 space-y-5 text-sm text-white/80">
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#f72585]" />
-                Auto level-matching keeps raids from blowing out headphones.
+                24/7 mode for servers that want music always ready.
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00f5ff]" />
-                Live waveform preview lets mods see when to drop callouts.
+                Saved server playlists so the best sessions are one command away.
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#f7b500]" />
-                Passive mode pauses playback the moment the voice channel empties.
+                Autoplay / radio mode to keep music going without dead air.
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#ac6bff]" />
-                Presets remember volume, filters, and crossfade lengths per channel.
+                DJ role controls and bigger queues for active communities.
               </li>
             </ul>
           </div>
@@ -230,11 +258,11 @@ export default function Home() {
               Commands
             </p>
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Quick controls your DJs actually use.
+              Quick controls your server will actually use.
             </h2>
             <p className="max-w-2xl text-white/70">
-              Slash commands keep things clean, while legacy prefixes stay available for muscle
-              memory. Highlight reel below.
+              Simple commands first. Premium value comes from persistence, control, and automation —
+              not from paywalling the basics.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -256,6 +284,47 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mt-24 space-y-8">
+          <div className="flex flex-col gap-3">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+              Free vs premium
+            </p>
+            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+              A simple monetization path that feels fair.
+            </h2>
+            <p className="max-w-2xl text-white/70">
+              Free should stay useful. Premium should save time, reduce friction, and give active
+              communities better control.
+            </p>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {plans.map((plan) => (
+              <article
+                key={plan.name}
+                className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              >
+                <div className="flex items-end justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60">
+                      {plan.name}
+                    </p>
+                    <h3 className="mt-2 text-3xl font-semibold text-white">{plan.price}</h3>
+                  </div>
+                  <p className="max-w-[14rem] text-right text-sm text-white/60">{plan.note}</p>
+                </div>
+                <ul className="mt-6 space-y-3 text-sm text-white/75">
+                  {plan.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00f5ff]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="mt-24 rounded-[32px] border border-white/15 bg-gradient-to-r from-[#130229]/95 via-[#240142]/80 to-[#031b27]/90 p-8 sm:p-12">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="space-y-4">
@@ -263,11 +332,11 @@ export default function Home() {
                 Ready to groove?
               </p>
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                Drop Jukebox into your next watch party or raid night.
+                Add Jukebox now. Upgrade later when your server wants more.
               </h2>
               <p className="max-w-2xl text-white/70">
-                Invite link and support server are live. Swap them for your production URLs whenever
-                you&apos;re ready to deploy.
+                The live site is up with placeholder links for now. Swap in the real invite and
+                support URLs when you are at your PC.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -293,9 +362,7 @@ export default function Home() {
             <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
               Features
             </a>
-            <a href="#" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
-              Docs soon
-            </a>
+            <span className="uppercase tracking-[0.3em] text-white/40">Premium planned</span>
           </div>
         </footer>
       </div>
