@@ -119,12 +119,11 @@ export default function Home() {
               Jukebox · Your Discord music machine
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Invite JukeBox to your server and bring it to life.
+              Discord music bot for your server.
             </h1>
             <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
-              Jukebox gives your server a clean, retro-styled music experience with simple controls,
-              smooth queue handling, and a support-driven roadmap focused on keeping the bot online,
-              reliable, and worth using every day.
+              JukeBox is a Discord music bot built for simple, reliable playback, smooth queue handling,
+              and a retro-styled experience that feels clean for active communities.
             </p>
           </div>
 
@@ -133,8 +132,8 @@ export default function Home() {
               Keep Jukebox operational
             </p>
             <p className="mt-3 max-w-3xl text-base text-white/80">
-              If Jukebox improves your server, backing the project through the support community helps
-              cover the work behind uptime, fixes, and the next round of improvements.
+              If this Discord music bot improves your server, backing the project helps cover uptime,
+              fixes, and the next round of improvements.
             </p>
           </div>
 
@@ -354,7 +353,15 @@ export default function Home() {
             <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
               Features
             </a>
-            <span className="uppercase tracking-[0.3em] text-white/40">Community supported</span>
+            <a href="/invite" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+              Invite
+            </a>
+            <a href="/support" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+              Support
+            </a>
+            <a href="/privacy" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+              Privacy
+            </a>
           </div>
         </footer>
       </div>
