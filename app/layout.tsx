@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MusicJoker · Your Discord music machine",
+  title: "Jukebox · Your Discord music machine",
   description:
-    "MusicJoker is the retro-inspired Discord music bot that keeps your server grooving with hi-fi playback and effortless controls.",
+    "Jukebox is the retro-inspired Discord music bot that keeps your server grooving with hi-fi playback and effortless controls.",
 };
 
 export default function RootLayout({

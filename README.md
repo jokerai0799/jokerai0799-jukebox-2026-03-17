@@ -1,6 +1,6 @@
-# MusicJoker landing page
+# Jukebox landing page
 
-Retro-styled Next.js landing page for the MusicJoker Discord music bot.
+Retro-styled Next.js landing page for the Jukebox Discord music bot.
 
 ## Stack
 - Next.js 16
