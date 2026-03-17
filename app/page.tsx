@@ -1,6 +1,6 @@
 const inviteUrl =
   "https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800";
-const supportUrl = "https://discord.gg/jukebox";
+const supportUrl = "https://buy.stripe.com/6oUaEZfEWc5Lazte5L8Ra00";
 
 const stats = [
   { label: "Servers queued", value: "2.3K+" },
