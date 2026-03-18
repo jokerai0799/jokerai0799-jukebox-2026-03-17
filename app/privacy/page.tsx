@@ -45,12 +45,29 @@ export default function PrivacyPage() {
             </p>
           </section>
           <section>
+            <h2 className="text-xl font-semibold text-white">How this information is used</h2>
+            <p className="mt-2">
+              Information is used to operate the JukeBox website, run the Discord music bot, keep the
+              service stable, investigate issues, and maintain a safe experience for communities using it.
+            </p>
+          </section>
+          <section>
             <h2 className="text-xl font-semibold text-white">Changes</h2>
             <p className="mt-2">
               This policy may be updated as the project evolves. Continued use of the site or bot after
               updates means you accept the revised policy.
             </p>
           </section>
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-white/10 bg-black/20 p-6 text-white/75">
+          <h2 className="text-xl font-semibold text-white">Related pages</h2>
+          <p className="mt-3">
+            You can return to the <a href="/" className="text-white hover:text-[#00f5ff]">homepage</a>,
+            visit the <a href="/invite" className="text-white hover:text-[#00f5ff]">invite page</a>, or
+            view the <a href="/support" className="text-white hover:text-[#00f5ff]">support page</a> for
+            more about JukeBox.
+          </p>
         </div>
       </div>
     </main>

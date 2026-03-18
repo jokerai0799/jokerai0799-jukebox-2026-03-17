@@ -349,7 +349,7 @@ export default function Home() {
 
         <footer className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} Jukebox · Greg Co. · Crafted for Discord communities.</span>
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex flex-wrap items-center gap-4 text-xs">
             <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
               Features
             </a>
@@ -361,6 +361,9 @@ export default function Home() {
             </a>
             <a href="/privacy" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
               Privacy
+            </a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+              Add Bot
             </a>
           </div>
         </footer>

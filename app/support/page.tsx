@@ -2,6 +2,21 @@ import type { Metadata } from "next";
 
 const supportUrl = "https://buy.stripe.com/6oUaEZfEWc5Lazte5L8Ra00";
 
+const supportAreas = [
+  {
+    title: "Hosting",
+    text: "Helps keep the bot available and responsive for active communities.",
+  },
+  {
+    title: "Maintenance",
+    text: "Supports ongoing fixes, updates, and quality-of-life improvements.",
+  },
+  {
+    title: "Roadmap",
+    text: "Keeps development moving toward features communities actually want.",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Support JukeBox | Discord Music Bot",
   description:
@@ -40,18 +55,46 @@ export default function SupportPage() {
           </a>
         </div>
         <div className="mt-12 grid gap-4 text-sm text-white/75 sm:grid-cols-3">
-          <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
-            <h2 className="text-base font-semibold text-white">Hosting</h2>
-            <p className="mt-2">Helps keep the bot available and responsive for active communities.</p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
-            <h2 className="text-base font-semibold text-white">Maintenance</h2>
-            <p className="mt-2">Supports ongoing fixes, updates, and quality-of-life improvements.</p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
-            <h2 className="text-base font-semibold text-white">Roadmap</h2>
-            <p className="mt-2">Keeps development moving toward features communities actually want.</p>
-          </div>
+          {supportAreas.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <h2 className="text-base font-semibold text-white">{item.title}</h2>
+              <p className="mt-2">{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <section className="rounded-2xl border border-white/10 bg-black/20 p-6 text-white/75">
+            <h2 className="text-xl font-semibold text-white">Why this page exists</h2>
+            <p className="mt-3">
+              JukeBox is positioned as a useful Discord music bot first. Support is there to keep the
+              project stable, maintain hosting, and make room for practical improvements over time.
+            </p>
+            <p className="mt-3">
+              This is intentionally simple. No bloated pricing matrix. Just a direct way to help keep the
+              bot healthy if your server gets value from it.
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-white/10 bg-black/20 p-6 text-white/75">
+            <h2 className="text-xl font-semibold text-white">Related pages</h2>
+            <ul className="mt-3 space-y-3">
+              <li>
+                <a href="/invite" className="text-white hover:text-[#00f5ff]">
+                  Invite JukeBox
+                </a>{" "}
+                if you want to add the bot to your Discord server.
+              </li>
+              <li>
+                Review the <a href="/privacy" className="text-white hover:text-[#00f5ff]">privacy policy</a>{" "}
+                for site and bot data handling notes.
+              </li>
+              <li>
+                Go back to the <a href="/" className="text-white hover:text-[#00f5ff]">homepage</a> for
+                features, commands, and overview.
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </main>
