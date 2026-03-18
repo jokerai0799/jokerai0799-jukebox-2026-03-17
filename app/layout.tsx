@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jukeboxbot.online"),
+  metadataBase: new URL("https://neonixbot.online"),
   title: "Neonix - Discord Music Bot",
   description:
     "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup. Invite the bot and support the project.",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Neonix - Discord Music Bot for Your Server",
     description:
       "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup.",
-    url: "https://jukeboxbot.online",
+    url: "https://neonixbot.online",
     siteName: "Neonix",
     type: "website",
   },

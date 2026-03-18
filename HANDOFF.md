@@ -5,7 +5,7 @@
 - Current purpose: marketing site / landing pages for the Neonix Discord music bot
 
 ## Current live assumptions
-- Current public domain in code: `https://jukeboxbot.online`
+- Current public domain in code: `https://neonixbot.online`
 - This was left unchanged during the Neonix rebrand so the existing deployed site does not break before a new domain is chosen.
 - When a new Neonix domain is ready, update these files together:
   - `app/layout.tsx`

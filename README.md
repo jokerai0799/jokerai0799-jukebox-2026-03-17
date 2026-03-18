@@ -33,5 +33,5 @@ Recommended settings:
 - The support link points to Stripe.
 - No required environment variables are currently needed for deployment.
 - The site is a static/standard marketing page with no backend dependencies.
-- Current public domain references still point at `jukeboxbot.online` temporarily until a Neonix domain is chosen.
+- Public domain now points at `neonixbot.online` and should be kept aligned in metadata/robots/sitemap during future rebrand edits.
 - See `HANDOFF.md` for rename-sensitive paths and validation steps.
