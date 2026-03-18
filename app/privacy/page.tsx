@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | JukeBox",
+  title: "Privacy Policy | Neonix",
   description:
-    "Read the JukeBox privacy policy for the Discord music bot website and related service operations.",
+    "Read the Neonix privacy policy for the Discord music bot website and related service operations.",
   alternates: {
     canonical: "/privacy",
   },
@@ -14,12 +14,12 @@ export default function PrivacyPage() {
     <main className="mx-auto max-w-4xl px-6 py-20 text-white sm:px-8">
       <div className="rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur sm:p-12">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">Privacy</p>
-        <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">JukeBox privacy policy</h1>
+        <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">Neonix privacy policy</h1>
         <div className="mt-8 space-y-6 text-white/75">
           <section>
             <h2 className="text-xl font-semibold text-white">What this covers</h2>
             <p className="mt-2">
-              This page covers the JukeBox website and the JukeBox Discord music bot at a high level.
+              This page covers the Neonix website and the Neonix Discord music bot at a high level.
             </p>
           </section>
           <section>
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold text-white">Bot usage data</h2>
             <p className="mt-2">
-              JukeBox may process server, channel, user, and command-related data needed to respond to
+              Neonix may process server, channel, user, and command-related data needed to respond to
               music commands, maintain queues, and keep the service functioning inside Discord.
             </p>
           </section>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold text-white">How this information is used</h2>
             <p className="mt-2">
-              Information is used to operate the JukeBox website, run the Discord music bot, keep the
+              Information is used to operate the Neonix website, run the Discord music bot, keep the
               service stable, investigate issues, and maintain a safe experience for communities using it.
             </p>
           </section>
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
             You can return to the <a href="/" className="text-white hover:text-[#00f5ff]">homepage</a>,
             visit the <a href="/invite" className="text-white hover:text-[#00f5ff]">invite page</a>, or
             view the <a href="/support" className="text-white hover:text-[#00f5ff]">support page</a> for
-            more about JukeBox.
+            more about Neonix.
           </p>
         </div>
       </div>

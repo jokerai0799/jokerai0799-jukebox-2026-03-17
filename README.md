@@ -1,6 +1,6 @@
-# Jukebox landing page
+# Neonix landing page
 
-Retro-styled Next.js landing page for the Jukebox Discord music bot.
+Retro-styled Next.js landing page for the Neonix Discord music bot.
 
 ## Stack
 - Next.js 16
@@ -30,6 +30,8 @@ Recommended settings:
 
 ## Notes
 - The public bot invite is wired directly into the site CTA buttons.
-- The support link is still a placeholder until the production support server URL is confirmed.
+- The support link points to Stripe.
 - No required environment variables are currently needed for deployment.
 - The site is a static/standard marketing page with no backend dependencies.
+- Current public domain references still point at `jukeboxbot.online` temporarily until a Neonix domain is chosen.
+- See `HANDOFF.md` for rename-sensitive paths and validation steps.

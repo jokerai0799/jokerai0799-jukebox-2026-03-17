@@ -24,14 +24,14 @@ const features = [
   {
     title: "Built to keep improving",
     description:
-      "Jukebox keeps growing with better automation, smarter queue tools, and quality-of-life upgrades shaped by the communities using it.",
+      "Neonix keeps growing with better automation, smarter queue tools, and quality-of-life upgrades shaped by the communities using it.",
     detail: "Community-backed roadmap",
   },
 ];
 
 const steps = [
   {
-    title: "Invite Jukebox",
+    title: "Invite Neonix",
     description:
       "Add the bot to your server, let it join voice, and keep the setup dead simple for members and moderators.",
   },
@@ -43,7 +43,7 @@ const steps = [
   {
     title: "Support the project",
     description:
-      "If Jukebox becomes part of your server, support the project directly so it stays reliable, online, and actively improved.",
+      "If Neonix becomes part of your server, support the project directly so it stays reliable, online, and actively improved.",
   },
 ];
 
@@ -83,7 +83,7 @@ const commands = [
 const supportWays = [
   "Join the support server and stay close to updates.",
   "Share feedback, issues, and feature ideas from real server use.",
-  "Help keep Jukebox sustainable so uptime and improvements stay a priority.",
+  "Help keep Neonix sustainable so uptime and improvements stay a priority.",
   "Bring other communities in if you want to help the project grow.",
 ];
 
@@ -116,20 +116,20 @@ export default function Home() {
 
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase text-white/70">
-              Jukebox · Your Discord music machine
+              Neonix · Your Discord music machine
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
               Discord music bot for your server.
             </h1>
             <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
-              JukeBox is a Discord music bot built for simple, reliable playback, smooth queue handling,
+              Neonix is a Discord music bot built for simple, reliable playback, smooth queue handling,
               and a retro-styled experience that feels clean for active communities.
             </p>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/75 backdrop-blur sm:p-6">
             <p className="font-semibold uppercase tracking-[0.28em] text-white/55">
-              Keep Jukebox operational
+              Keep Neonix operational
             </p>
             <p className="mt-3 max-w-3xl text-base text-white/80">
               If this Discord music bot improves your server, backing the project helps cover uptime,
@@ -177,7 +177,7 @@ export default function Home() {
               Built for real server sessions.
             </h2>
             <p className="max-w-2xl text-white/70">
-              Jukebox is designed to feel clean, fast, and fun now — with the project supported in a
+              Neonix is designed to feel clean, fast, and fun now — with the project supported in a
               way that keeps the essentials strong and the experience getting better over time.
             </p>
           </div>
@@ -274,13 +274,13 @@ export default function Home() {
         <section className="mt-24 space-y-8">
           <div className="flex flex-col gap-3">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Support Jukebox
+              Support Neonix
             </p>
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">
               Help keep the bot stable, available, and improving.
             </h2>
             <p className="max-w-2xl text-white/70">
-              Jukebox is meant to be useful first. If your community enjoys it, supporting the project
+              Neonix is meant to be useful first. If your community enjoys it, supporting the project
               helps keep hosting, maintenance, and product improvements moving in the right direction.
             </p>
           </div>
@@ -288,12 +288,12 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div className="space-y-4 text-sm text-white/75">
                 <p>
-                  Backing the project is about keeping Jukebox healthy: faster fixes, better reliability,
+                  Backing the project is about keeping Neonix healthy: faster fixes, better reliability,
                   and a clearer path for the features communities actually ask for.
                 </p>
                 <p>
                   No bloated pricing grid. No split between free and paid messaging. Just a clean ask:
-                  if Jukebox earns a place in your server, help keep it going.
+                  if Neonix earns a place in your server, help keep it going.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">
@@ -301,13 +301,13 @@ export default function Home() {
                   href={supportUrl}
                   className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
                 >
-                  Donate to support JukeBox
+                  Donate to support Neonix
                 </a>
                 <a
                   href={inviteUrl}
                   className="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 text-base font-semibold text-white/90 transition hover:text-white"
                 >
-                  Invite Jukebox
+                  Invite Neonix
                 </a>
               </div>
             </div>
@@ -321,10 +321,10 @@ export default function Home() {
                 Ready to groove?
               </p>
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                Invite Jukebox now — and back it if you want to keep it strong.
+                Invite Neonix now — and back it if you want to keep it strong.
               </h2>
               <p className="max-w-2xl text-white/70">
-                Add Jukebox to your server, start a queue, and if it becomes part of the routine,
+                Add Neonix to your server, start a queue, and if it becomes part of the routine,
                 support the project that keeps it online and improving.
               </p>
             </div>
@@ -333,7 +333,7 @@ export default function Home() {
                 href={supportUrl}
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
               >
-                Donate to support JukeBox
+                Donate to support Neonix
               </a>
               <a
                 href={inviteUrl}
@@ -348,7 +348,7 @@ export default function Home() {
         </section>
 
         <footer className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Jukebox · Greg Co. · Crafted for Discord communities.</span>
+          <span>© {new Date().getFullYear()} Neonix · Greg Co. · Crafted for Discord communities.</span>
           <div className="flex flex-wrap items-center gap-4 text-xs">
             <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
               Features

@@ -14,14 +14,14 @@ const commandNotes = [
   },
   {
     title: "Built for shared servers",
-    text: "JukeBox is designed for communities that want a Discord music bot without clutter.",
+    text: "Neonix is designed for communities that want a Discord music bot without clutter.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Invite JukeBox | Discord Music Bot",
+  title: "Invite Neonix | Discord Music Bot",
   description:
-    "Invite JukeBox, the Discord music bot for simple playback, clean queue controls, and reliable music sessions in your server.",
+    "Invite Neonix, the Discord music bot for simple playback, clean queue controls, and reliable music sessions in your server.",
   alternates: {
     canonical: "/invite",
   },
@@ -33,10 +33,10 @@ export default function InvitePage() {
       <div className="rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur sm:p-12">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">Invite</p>
         <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">
-          Invite JukeBox to your Discord server.
+          Invite Neonix to your Discord server.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-white/70">
-          JukeBox is a Discord music bot built for reliable playback, straightforward commands, and
+          Neonix is a Discord music bot built for reliable playback, straightforward commands, and
           shared listening sessions that stay easy to manage.
         </p>
 
@@ -68,7 +68,7 @@ export default function InvitePage() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <section className="rounded-2xl border border-white/10 bg-black/20 p-6 text-white/75">
-            <h2 className="text-xl font-semibold text-white">What JukeBox is built for</h2>
+            <h2 className="text-xl font-semibold text-white">What Neonix is built for</h2>
             <p className="mt-3">
               This Discord music bot is aimed at real server use: simple playback, practical queue
               handling, and controls that members and moderators can actually understand.

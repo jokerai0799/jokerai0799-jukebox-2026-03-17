@@ -14,32 +14,33 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jukeboxbot.online"),
-  title: "JukeBox - Discord Music Bot",
+  title: "Neonix - Discord Music Bot",
   description:
-    "JukeBox is a Discord music bot with simple playback controls, queue management, and easy server setup. Invite the bot and support the project.",
+    "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup. Invite the bot and support the project.",
   keywords: [
+    "Neonix",
+    "Neonix Discord bot",
     "discord music bot",
     "music bot for discord",
     "discord bot music",
-    "jukebox discord bot",
-    "discord music",
+    "youtube music bot for discord",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "JukeBox - Discord Music Bot for Your Server",
+    title: "Neonix - Discord Music Bot for Your Server",
     description:
-      "JukeBox is a Discord music bot with simple playback controls, queue management, and easy server setup.",
+      "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup.",
     url: "https://jukeboxbot.online",
-    siteName: "Jukebox",
+    siteName: "Neonix",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "JukeBox - Discord Music Bot",
+    title: "Neonix - Discord Music Bot",
     description:
-      "JukeBox is a Discord music bot with simple playback controls, queue management, and easy server setup.",
+      "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup.",
   },
 };
 
