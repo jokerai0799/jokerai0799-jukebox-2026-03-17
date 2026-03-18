@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jukeboxbot.online"),
-  title: "JukeBox - Discord Music Bot for Your Server",
+  title: "JukeBox - Discord Music Bot",
   description:
     "JukeBox is a Discord music bot with simple playback controls, queue management, and easy server setup. Invite the bot and support the project.",
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JukeBox - Discord Music Bot for Your Server",
+    title: "JukeBox - Discord Music Bot",
     description:
       "JukeBox is a Discord music bot with simple playback controls, queue management, and easy server setup.",
   },
