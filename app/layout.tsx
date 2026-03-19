@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     title: "Neonix - Discord Music Bot for Your Server",
     description:
