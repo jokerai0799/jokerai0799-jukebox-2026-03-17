@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+
+const siteUrl = "https://neonixbot.online";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Neonix",
+  title: "Privacy Policy",
   description:
     "Read the Neonix privacy policy for the Discord music bot website and related service operations.",
   alternates: {
     canonical: "/privacy",
+  },
+  openGraph: {
+    title: "Neonix Privacy Policy",
+    description:
+      "Read the Neonix privacy policy for the Discord music bot website and related service operations.",
+    url: `${siteUrl}/privacy`,
+    type: "article",
+  },
+  twitter: {
+    title: "Neonix Privacy Policy",
+    description:
+      "Read the Neonix privacy policy for the Discord music bot website and related service operations.",
   },
 };
 
@@ -63,9 +78,9 @@ export default function PrivacyPage() {
         <div className="mt-10 rounded-2xl border border-white/10 bg-black/20 p-6 text-white/75">
           <h2 className="text-xl font-semibold text-white">Related pages</h2>
           <p className="mt-3">
-            You can return to the <a href="/" className="text-white hover:text-[#00f5ff]">homepage</a>,
-            visit the <a href="/invite" className="text-white hover:text-[#00f5ff]">invite page</a>, or
-            view the <a href="/support" className="text-white hover:text-[#00f5ff]">support page</a> for
+            You can return to the <Link href="/" className="text-white hover:text-[#00f5ff]">homepage</Link>,
+            visit the <Link href="/invite" className="text-white hover:text-[#00f5ff]">invite page</Link>, or
+            view the <Link href="/support" className="text-white hover:text-[#00f5ff]">support page</Link> for
             more about Neonix.
           </p>
         </div>

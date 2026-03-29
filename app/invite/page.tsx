@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
+const siteUrl = "https://neonixbot.online";
 const inviteUrl =
   "https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800";
 
@@ -19,11 +21,23 @@ const commandNotes = [
 ];
 
 export const metadata: Metadata = {
-  title: "Invite Neonix | Discord Music Bot",
+  title: "Invite Neonix",
   description:
     "Invite Neonix, the Discord music bot for simple playback, clean queue controls, and reliable music sessions in your server.",
   alternates: {
     canonical: "/invite",
+  },
+  openGraph: {
+    title: "Invite Neonix",
+    description:
+      "Invite Neonix, the Discord music bot for simple playback, clean queue controls, and reliable music sessions in your server.",
+    url: `${siteUrl}/invite`,
+    type: "website",
+  },
+  twitter: {
+    title: "Invite Neonix",
+    description:
+      "Invite Neonix, the Discord music bot for simple playback, clean queue controls, and reliable music sessions in your server.",
   },
 };
 
@@ -49,12 +63,12 @@ export default function InvitePage() {
           >
             Open Discord invite
           </a>
-          <a
+          <Link
             href="/"
             className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white/85 transition hover:border-white hover:text-white"
           >
             Back to homepage
-          </a>
+          </Link>
         </div>
 
         <div className="mt-12 grid gap-4 text-sm text-white/75 sm:grid-cols-3">
@@ -95,7 +109,7 @@ export default function InvitePage() {
                 for the site and bot usage overview.
               </li>
               <li>
-                Return to the <a href="/" className="text-white hover:text-[#00f5ff]">homepage</a> for
+                Return to the <Link href="/" className="text-white hover:text-[#00f5ff]">homepage</Link> for
                 commands, features, and product overview.
               </li>
             </ul>

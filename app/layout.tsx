@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,19 +13,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://neonixbot.online";
+const defaultTitle = "Neonix - Discord Music Bot";
+const defaultDescription =
+  "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup. Invite the bot and support the project.";
+const ogImage = "/opengraph-image";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://neonixbot.online"),
-  title: "Neonix - Discord Music Bot",
-  description:
-    "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup. Invite the bot and support the project.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: defaultTitle,
+    template: "%s | Neonix",
+  },
+  description: defaultDescription,
+  applicationName: "Neonix",
   keywords: [
     "Neonix",
     "Neonix Discord bot",
     "discord music bot",
     "music bot for discord",
     "discord bot music",
-    "youtube music bot for discord",
+    "soundcloud discord bot",
+    "discord queue bot",
+    "music bot for Discord server",
   ],
+  category: "technology",
   alternates: {
     canonical: "/",
   },
@@ -34,18 +47,37 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   openGraph: {
-    title: "Neonix - Discord Music Bot for Your Server",
-    description:
-      "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup.",
-    url: "https://neonixbot.online",
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteUrl,
     siteName: "Neonix",
     type: "website",
+    locale: "en_GB",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Neonix Discord music bot",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neonix - Discord Music Bot",
-    description:
-      "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup.",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -55,11 +87,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-[#030014] text-white antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

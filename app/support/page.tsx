@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
+const siteUrl = "https://neonixbot.online";
 const supportUrl = "https://buy.stripe.com/6oUaEZfEWc5Lazte5L8Ra00";
 
 const supportAreas = [
@@ -18,11 +20,23 @@ const supportAreas = [
 ];
 
 export const metadata: Metadata = {
-  title: "Support Neonix | Discord Music Bot",
+  title: "Support Neonix",
   description:
     "Support Neonix to help keep the Discord music bot online, maintained, and improving.",
   alternates: {
     canonical: "/support",
+  },
+  openGraph: {
+    title: "Support Neonix",
+    description:
+      "Support Neonix to help keep the Discord music bot online, maintained, and improving.",
+    url: `${siteUrl}/support`,
+    type: "website",
+  },
+  twitter: {
+    title: "Support Neonix",
+    description:
+      "Support Neonix to help keep the Discord music bot online, maintained, and improving.",
   },
 };
 
@@ -80,17 +94,17 @@ export default function SupportPage() {
             <h2 className="text-xl font-semibold text-white">Related pages</h2>
             <ul className="mt-3 space-y-3">
               <li>
-                <a href="/invite" className="text-white hover:text-[#00f5ff]">
+                <Link href="/invite" className="text-white hover:text-[#00f5ff]">
                   Invite Neonix
-                </a>{" "}
+                </Link>{" "}
                 if you want to add the bot to your Discord server.
               </li>
               <li>
-                Review the <a href="/privacy" className="text-white hover:text-[#00f5ff]">privacy policy</a>{" "}
+                Review the <Link href="/privacy" className="text-white hover:text-[#00f5ff]">privacy policy</Link>{" "}
                 for site and bot data handling notes.
               </li>
               <li>
-                Go back to the <a href="/" className="text-white hover:text-[#00f5ff]">homepage</a> for
+                Go back to the <Link href="/" className="text-white hover:text-[#00f5ff]">homepage</Link> for
                 features, commands, and overview.
               </li>
             </ul>

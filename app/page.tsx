@@ -1,3 +1,4 @@
+const siteUrl = "https://neonixbot.online";
 const inviteUrl =
   "https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800";
 const supportUrl = "https://buy.stripe.com/6oUaEZfEWc5Lazte5L8Ra00";
@@ -87,216 +88,297 @@ const supportWays = [
   "Bring other communities in if you want to help the project grow.",
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: "Neonix",
+      url: siteUrl,
+      description:
+        "Neonix is a Discord music bot with simple playback controls, queue management, and easy server setup.",
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Neonix",
+      applicationCategory: "MultimediaApplication",
+      operatingSystem: "Discord",
+      url: siteUrl,
+      downloadUrl: inviteUrl,
+      offers: {
+        "@type": "Offer",
+        url: supportUrl,
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      },
+      description:
+        "Neonix is a Discord music bot built for simple playback, queue management, and smooth music sessions for active communities.",
+      featureList: commands.map((command) => command.description),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+      ],
+    },
+  ],
+};
+
 export default function Home() {
   return (
-    <main className="relative isolate overflow-hidden">
-      <div
-        className="pointer-events-none absolute inset-x-0 top-[-10%] h-[420px] opacity-70 blur-3xl"
-        aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(247,37,133,0.35) 0%, rgba(247,37,133,0) 50%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-[-25%] h-[520px] opacity-50 blur-[120px]"
-        aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(0,245,255,0.25) 0%, rgba(0,245,255,0) 55%)",
-        }}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 sm:px-8 lg:px-12">
-        <header className="space-y-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
-            <span className="h-2 w-2 rounded-full bg-[#f72585]" />
-            Community-supported Discord music bot
-          </div>
+      <main className="relative isolate overflow-hidden">
+        <div
+          className="pointer-events-none absolute inset-x-0 top-[-10%] h-[420px] opacity-70 blur-3xl"
+          aria-hidden="true"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(247,37,133,0.35) 0%, rgba(247,37,133,0) 50%)",
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-[-25%] h-[520px] opacity-50 blur-[120px]"
+          aria-hidden="true"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(0,245,255,0.25) 0%, rgba(0,245,255,0) 55%)",
+          }}
+        />
 
-          <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase text-white/70">
-              Neonix · Your Discord music machine
-            </p>
-            <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Discord music bot for your server.
-            </h1>
-            <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
-              Neonix is a Discord music bot built for simple, reliable playback, smooth queue handling,
-              and a retro-styled experience that feels clean for active communities.
-            </p>
-          </div>
+        <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 sm:px-8 lg:px-12">
+          <header className="space-y-10">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+              <span className="h-2 w-2 rounded-full bg-[#f72585]" />
+              Community-supported Discord music bot
+            </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/75 backdrop-blur sm:p-6">
-            <p className="font-semibold uppercase tracking-[0.28em] text-white/55">
-              Keep Neonix operational
-            </p>
-            <p className="mt-3 max-w-3xl text-base text-white/80">
-              If this Discord music bot improves your server, backing the project helps cover uptime,
-              fixes, and the next round of improvements.
-            </p>
-          </div>
+            <div className="space-y-6">
+              <p className="text-sm font-semibold uppercase text-white/70">
+                Neonix · Your Discord music machine
+              </p>
+              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+                Discord music bot for your server.
+              </h1>
+              <p className="max-w-3xl text-lg text-white/70 sm:text-xl">
+                Neonix is a Discord music bot built for simple, reliable playback, smooth queue handling,
+                and a retro-styled experience that feels clean for active communities.
+              </p>
+            </div>
 
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={supportUrl}
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-[#f72585] via-[#d91ef5] to-[#00f5ff] px-8 py-3 text-base font-semibold text-white shadow-[0_0_25px_rgba(247,37,133,0.45)] transition hover:translate-y-0.5"
-            >
-              Support the project
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-            </a>
-            <a
-              href={inviteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white/80 transition hover:border-white hover:text-white"
-            >
-              Invite the bot
-            </a>
-          </div>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/75 backdrop-blur sm:p-6">
+              <p className="font-semibold uppercase tracking-[0.28em] text-white/55">
+                Keep Neonix operational
+              </p>
+              <p className="mt-3 max-w-3xl text-base text-white/80">
+                If this Discord music bot improves your server, backing the project helps cover uptime,
+                fixes, and the next round of improvements.
+              </p>
+            </div>
 
-          <div className="grid gap-4 text-sm text-white/70 sm:grid-cols-3">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={supportUrl}
+                className="group inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-[#f72585] via-[#d91ef5] to-[#00f5ff] px-8 py-3 text-base font-semibold text-white shadow-[0_0_25px_rgba(247,37,133,0.45)] transition hover:translate-y-0.5"
               >
-                <p className="text-xs uppercase tracking-[0.25em] text-white/50">{stat.label}</p>
-                <p className="text-2xl font-semibold text-white">{stat.value}</p>
-              </div>
-            ))}
-          </div>
-        </header>
-
-        <section id="features" className="mt-20 space-y-10">
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Features
-            </p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Built for real server sessions.
-            </h2>
-            <p className="max-w-2xl text-white/70">
-              Neonix is designed to feel clean, fast, and fun now — with the project supported in a
-              way that keeps the essentials strong and the experience getting better over time.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {features.map((feature) => (
-              <article
-                key={feature.title}
-                className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/0 p-6 backdrop-blur"
+                Support the project
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </a>
+              <a
+                href={inviteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white/80 transition hover:border-white hover:text-white"
               >
-                <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                <p className="text-sm text-white/70">{feature.description}</p>
-                <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
-                  {feature.detail}
-                </span>
-              </article>
-            ))}
-          </div>
-        </section>
+                Invite the bot
+              </a>
+            </div>
 
-        <section className="mt-24 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              How it works
-            </p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Invite it, queue tracks, keep the room moving.
-            </h2>
-            <ol className="space-y-6">
-              {steps.map((step, index) => (
-                <li key={step.title} className="flex gap-4">
-                  <span className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/40 text-lg font-semibold">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{step.title}</h3>
-                    <p className="text-sm text-white/70">{step.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-[#11062d]/90 to-[#030014]/60 p-8 backdrop-blur">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Why people back it
-            </p>
-            <ul className="mt-6 space-y-5 text-sm text-white/80">
-              {supportWays.map((item, index) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span
-                    className={`mt-1 h-2.5 w-2.5 rounded-full ${
-                      ["bg-[#f72585]", "bg-[#00f5ff]", "bg-[#f7b500]", "bg-[#ac6bff]"][index]
-                    }`}
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="mt-24 space-y-8">
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Commands
-            </p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Quick controls your server will actually use.
-            </h2>
-            <p className="max-w-2xl text-white/70">
-              Simple commands first. The goal is a bot that feels easy to run, dependable in voice,
-              and worth supporting because it stays sharp.
-            </p>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {commands.map((command) => (
-              <div
-                key={command.name}
-                className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/80 backdrop-blur"
-              >
-                <div className="flex items-center justify-between text-white">
-                  <p className="text-base font-semibold">{command.name}</p>
-                  <span className="text-xs uppercase tracking-[0.3em] text-white/50">
-                    Live
-                  </span>
+            <div className="grid gap-4 text-sm text-white/70 sm:grid-cols-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"
+                >
+                  <p className="text-xs uppercase tracking-[0.25em] text-white/50">{stat.label}</p>
+                  <p className="text-2xl font-semibold text-white">{stat.value}</p>
                 </div>
-                <p className="mt-1 font-mono text-xs text-white/70">{command.usage}</p>
-                <p className="mt-3 text-white/70">{command.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </header>
 
-        <section className="mt-24 space-y-8">
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-              Support Neonix
-            </p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Help keep the bot stable, available, and improving.
-            </h2>
-            <p className="max-w-2xl text-white/70">
-              Neonix is meant to be useful first. If your community enjoys it, supporting the project
-              helps keep hosting, maintenance, and product improvements moving in the right direction.
-            </p>
-          </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-            <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-              <div className="space-y-4 text-sm text-white/75">
-                <p>
-                  Backing the project is about keeping Neonix healthy: faster fixes, better reliability,
-                  and a clearer path for the features communities actually ask for.
+          <section id="features" className="mt-20 space-y-10">
+            <div className="flex flex-col gap-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+                Features
+              </p>
+              <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                Built for real server sessions.
+              </h2>
+              <p className="max-w-2xl text-white/70">
+                Neonix is designed to feel clean, fast, and fun now, with support that keeps the
+                essentials strong and the experience getting better over time.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {features.map((feature) => (
+                <article
+                  key={feature.title}
+                  className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/0 p-6 backdrop-blur"
+                >
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <p className="text-sm text-white/70">{feature.description}</p>
+                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
+                    {feature.detail}
+                  </span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-24 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+                How it works
+              </p>
+              <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                Invite it, queue tracks, keep the room moving.
+              </h2>
+              <ol className="space-y-6">
+                {steps.map((step, index) => (
+                  <li key={step.title} className="flex gap-4">
+                    <span className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/40 text-lg font-semibold">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                      <p className="text-sm text-white/70">{step.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-[#11062d]/90 to-[#030014]/60 p-8 backdrop-blur">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+                Why people back it
+              </p>
+              <ul className="mt-6 space-y-5 text-sm text-white/80">
+                {supportWays.map((item, index) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      className={`mt-1 h-2.5 w-2.5 rounded-full ${
+                        ["bg-[#f72585]", "bg-[#00f5ff]", "bg-[#f7b500]", "bg-[#ac6bff]"][index]
+                      }`}
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section className="mt-24 space-y-8">
+            <div className="flex flex-col gap-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+                Commands
+              </p>
+              <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                Quick controls your server will actually use.
+              </h2>
+              <p className="max-w-2xl text-white/70">
+                Simple commands first. The goal is a bot that feels easy to run, dependable in voice,
+                and worth supporting because it stays sharp.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {commands.map((command) => (
+                <div
+                  key={command.name}
+                  className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/80 backdrop-blur"
+                >
+                  <div className="flex items-center justify-between text-white">
+                    <p className="text-base font-semibold">{command.name}</p>
+                    <span className="text-xs uppercase tracking-[0.3em] text-white/50">
+                      Live
+                    </span>
+                  </div>
+                  <p className="mt-1 font-mono text-xs text-white/70">{command.usage}</p>
+                  <p className="mt-3 text-white/70">{command.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-24 space-y-8">
+            <div className="flex flex-col gap-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+                Support Neonix
+              </p>
+              <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                Help keep the bot stable, available, and improving.
+              </h2>
+              <p className="max-w-2xl text-white/70">
+                Neonix is meant to be useful first. If your community enjoys it, supporting the project
+                helps keep hosting, maintenance, and product improvements moving in the right direction.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+                <div className="space-y-4 text-sm text-white/75">
+                  <p>
+                    Backing the project is about keeping Neonix healthy: faster fixes, better reliability,
+                    and a clearer path for the features communities actually ask for.
+                  </p>
+                  <p>
+                    No bloated pricing grid. No split between free and paid messaging. Just a clean ask:
+                    if Neonix earns a place in your server, help keep it going.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">
+                  <a
+                    href={supportUrl}
+                    className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
+                  >
+                    Donate to support Neonix
+                  </a>
+                  <a
+                    href={inviteUrl}
+                    className="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 text-base font-semibold text-white/90 transition hover:text-white"
+                  >
+                    Invite Neonix
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="mt-24 rounded-[32px] border border-white/15 bg-gradient-to-r from-[#130229]/95 via-[#240142]/80 to-[#031b27]/90 p-8 sm:p-12">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="space-y-4">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+                  Ready to groove?
                 </p>
-                <p>
-                  No bloated pricing grid. No split between free and paid messaging. Just a clean ask:
-                  if Neonix earns a place in your server, help keep it going.
+                <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                  Invite Neonix now, and back it if you want to keep it strong.
+                </h2>
+                <p className="max-w-2xl text-white/70">
+                  Add Neonix to your server, start a queue, and if it becomes part of the routine,
+                  support the project that keeps it online and improving.
                 </p>
               </div>
-              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">
+              <div className="flex flex-col gap-4 sm:flex-row">
                 <a
                   href={supportUrl}
                   className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
@@ -305,69 +387,49 @@ export default function Home() {
                 </a>
                 <a
                   href={inviteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 text-base font-semibold text-white/90 transition hover:text-white"
                 >
-                  Invite Neonix
+                  Launch invite
                 </a>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="mt-24 rounded-[32px] border border-white/15 bg-gradient-to-r from-[#130229]/95 via-[#240142]/80 to-[#031b27]/90 p-8 sm:p-12">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
-                Ready to groove?
-              </p>
-              <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                Invite Neonix now — and back it if you want to keep it strong.
-              </h2>
-              <p className="max-w-2xl text-white/70">
-                Add Neonix to your server, start a queue, and if it becomes part of the routine,
-                support the project that keeps it online and improving.
-              </p>
+          <footer className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-1">
+              <span>© {new Date().getFullYear()} Neonix · Greg Co. · Crafted for Discord communities.</span>
+              <span>
+                Built by{" "}
+                <a
+                  href="https://quotefollowup.online"
+                  className="text-white/75 underline-offset-4 transition hover:text-white hover:underline"
+                >
+                  Bluepeak Software
+                </a>
+              </span>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href={supportUrl}
-                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-white/90"
-              >
-                Donate to support Neonix
+            <div className="flex flex-wrap items-center gap-4 text-xs">
+              <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+                Features
               </a>
-              <a
-                href={inviteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 text-base font-semibold text-white/90 transition hover:text-white"
-              >
-                Launch invite
+              <a href="/invite" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+                Invite
+              </a>
+              <a href="/support" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+                Support
+              </a>
+              <a href="/privacy" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+                Privacy
+              </a>
+              <a href="https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
+                Add Bot
               </a>
             </div>
-          </div>
-        </section>
-
-        <footer className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Neonix · Greg Co. · Crafted for Discord communities.</span>
-          <div className="flex flex-wrap items-center gap-4 text-xs">
-            <a href="#features" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
-              Features
-            </a>
-            <a href="/invite" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
-              Invite
-            </a>
-            <a href="/support" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
-              Support
-            </a>
-            <a href="/privacy" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
-              Privacy
-            </a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800" className="uppercase tracking-[0.3em] text-white/60 hover:text-white">
-              Add Bot
-            </a>
-          </div>
-        </footer>
-      </div>
-    </main>
+          </footer>
+        </div>
+      </main>
+    </>
   );
 }
