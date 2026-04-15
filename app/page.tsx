@@ -2,6 +2,7 @@ const siteUrl = "https://neonixbot.online";
 const inviteUrl =
   "https://discord.com/oauth2/authorize?client_id=1483251699647774791&scope=bot%20applications.commands&permissions=3148800";
 const supportUrl = "https://buy.stripe.com/6oUaEZfEWc5Lazte5L8Ra00";
+const catalystUrl = "https://quotechaser.online/";
 
 const stats = [
   { label: "Servers queued", value: "2.3K+" },
@@ -407,6 +408,15 @@ export default function Home() {
                   className="text-white/75 underline-offset-4 transition hover:text-white hover:underline"
                 >
                   Bluepeak Software
+                </a>
+              </span>
+              <span>
+                Also built by Bluepeak:{" "}
+                <a
+                  href={catalystUrl}
+                  className="text-white/75 underline-offset-4 transition hover:text-white hover:underline"
+                >
+                  Quote Chaser
                 </a>
               </span>
             </div>
